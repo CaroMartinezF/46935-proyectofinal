@@ -28,6 +28,7 @@ footer{
     padding: 1.25rem 2.5rem;
     position: sticky;
     top: 0px;
+    z-index: 5;
 }
 .logoKiwii img{
     width: 185px;
@@ -44,6 +45,9 @@ footer{
     font-family: 'lora', serif;
     font-size: 2.1875rem;
     font-weight: bolder;
+}
+.navBar li a:hover{
+    color: #8C6B30;
 }
 /* Main */
 /* Sección Banner Principal */
@@ -122,6 +126,26 @@ p{
     font-size: 1.25rem;
     color: white;
 }
+h1::selection{
+    background-color: #68A519;
+    color: white;
+}
+h2::selection{
+    background-color: #8C6B30;
+    color: white;
+}
+h3::selection{
+    background-color: #8C6B30;
+    color: white;
+}
+h4::selection{
+    background-color: #8C6B30;
+    color: white;
+}
+p::selection{
+    background-color: #8C6B30;
+    color: white;
+}
 
 /* Sección Nosotros Index*/
 .sectionNosotros {
@@ -129,7 +153,6 @@ p{
     width: 100%;
     flex-direction: row;
     justify-content: space-evenly;
-
 }
 
 .sectionNosotros div{
@@ -148,11 +171,21 @@ p{
     display: flex;
     padding-top: .625rem;
     border-radius: 10%;
+    opacity: 40%;
+}
+
+.sectionNosotros div img:hover{
+    opacity: 100%;
 }
 
 
 .sectionNosotros div p{
     padding-top: .625rem;
+}
+
+.sectionNosotros div p:hover::after{
+    content: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis similique cum beatae illo nemo";
+    
 }
 
 /* GRIDS */
@@ -233,16 +266,22 @@ p{
     width: 100%;
     height: 85%;
     object-fit: cover;
+    filter: opacity(40%);
 }
 
+.cardsClientes div img:hover{
+    filter: opacity(100%);
+}
 
 .cardsClientes div button{
-    background-color: #8C6B30;
-    border-color: #8C6B30;
+    background-color: #68A519;
+    border-color: #68A519;
     margin-bottom: .625rem;
     margin-top: .625rem;
-    color: white;
-    text-decoration: none;
+}
+.cardsClientes div button:active{
+    background-color: #8C6B30;
+    border-color: #8C6B30;
 }
 
 #cardsPaginaClientes{
@@ -253,30 +292,27 @@ p{
     grid-row: repeat(2,1fr);
 }
 
-.cliente1{
+#cardsPaginaClientes div:first-child{
     grid-column: 1/2;
     grid-row: 1/2;
-
 }
-.cliente2{
+#cardsPaginaClientes div:nth-child(2){
     grid-column: 2/3;
     grid-row: 1/2;
 }
-.cliente3{
+#cardsPaginaClientes div:nth-child(3){
     grid-column: 3/4;
     grid-row: 1/2;
 }
-.cliente4{
+#cardsPaginaClientes div:nth-child(4){
     grid-column: 1/2;
     grid-row: 2/3;
-
 }
-.cliente5{
+#cardsPaginaClientes div:nth-child(5){
     grid-column: 2/3;
     grid-row: 2/3;
-
 }
-.cliente6{
+#cardsPaginaClientes div:last-child{
     grid-column: 3/4;
     grid-row: 2/3;
 }
@@ -311,9 +347,12 @@ p{
     height: 31.25rem;
     justify-content: space-around;
     padding-bottom: 2.5rem;
-
 }
 
+input:focus{
+    background-color: #68A519;
+    color: white;
+}
 /* Nosotros */
 .sectionNosotrosDetalle{
     padding-bottom: .125rem;
@@ -349,48 +388,49 @@ p{
     grid-row: repeat(3,1fr);
     row-gap: .625rem;
 }
-.footer1{
+.footerBar div:first-child{
     grid-column: 1/2;
     grid-row: 1/2;
     align-items: center;
 }
-.footer2{
+
+.footerBar div:nth-child(2){
     grid-column: 1/2;
     grid-row: 2/3;
     display: flex;
     align-items: center;
 }
-.footer3{
+.footerBar div:nth-child(3){
     grid-column: 1/2;
     grid-row: 3/4;
     display: flex;
     align-items: center;
 }
-.footer4{
+.footerBar div:nth-child(4){
     grid-column: 2/3;
     grid-row: 1/2;
     align-items: center;
 }
-.footer5{
+.footerBar div:nth-child(5){
     grid-column: 2/3;
     grid-row: 2/3;
     display: flex;
     align-items: center;
 }
 
-.footer6{
+.footerBar div:nth-child(6){
     grid-column: 2/3;
     grid-row: 3/4;
     display: flex;
     align-items: center;
 }
-.footer7{
+.footerBar div:nth-child(7){
     grid-column: 3/4;
     grid-row: 1/2;
     align-items: center;
 }
 
-.footer8{
+.footerBar div:last-child{
     grid-column: 3/4;
     grid-row: 2/4;
     display: flex;
@@ -403,14 +443,19 @@ p{
     text-align: left;
 }
 
-.footerBar li a{
+.footerBar div li{
+    width: fit-content;
+}
+.footerBar div li a{
     text-decoration: none;
     color: white;
     font-family: 'lora', serif;
     font-size: 1.125rem;
     padding-left: .625rem;
 }
-
+.footerBar div li a:hover{
+    color: #8C6B30;
+}
 .whatsapp{
     position: fixed;
     bottom: 1.25rem;
@@ -428,23 +473,23 @@ p{
     padding-bottom: .625rem;
 }
 
-#branding{
+.sectionServicios div:first-child{
     grid-column: 1/2;
     grid-row: 1/2;
 }
-#creatividad{
+.sectionServicios div:nth-child(2){
     grid-column: 2/3;
     grid-row: 1/2;
 }
-#comunicacion{
+.sectionServicios div:nth-child(3){
     grid-column: 3/4;
     grid-row: 1/2;
 }
-#emailMarketing{
+.sectionServicios div:nth-child(4){
     grid-column: 1/3;
     grid-row: 2/3;
 }
-#sitioWeb{
+.sectionServicios div:last-child{
     grid-column: 2/4;
     grid-row: 2/3;
 }
@@ -529,21 +574,20 @@ p{
         grid-column: repeat(2,1fr);
         grid-row: repeat(3,1fr);
     }
-    .cliente3{
+    #cardsPaginaClientes div:nth-child(3){
         grid-column: 1/2;
         grid-row: 2/3;
     }
-    .cliente4{
+    #cardsPaginaClientes div:nth-child(4){
         grid-column: 2/3;
         grid-row: 2/3;
-    
     }
-    .cliente5{
+    #cardsPaginaClientes div:nth-child(5){
         grid-column: 1/2;
         grid-row: 3/4;
         padding-bottom: .625rem;
     }
-    .cliente6{
+    #cardsPaginaClientes div:last-child{
         grid-column: 2/3;
         grid-row: 3/4;
         padding-bottom: .625rem;
@@ -564,11 +608,11 @@ p{
         grid-row: repeat(5,1fr);
         justify-content: center;
     }
-    .footer7{
+    .footerBar div:nth-child(7){
         grid-column: 1/2;
         grid-row: 4/5;
     }
-    .footer8{
+    .footerBar div:last-child{
         grid-column: 1/2;
         grid-row: 5/6;
         display: flex;
@@ -580,15 +624,15 @@ p{
         grid-column: repeat(2,1fr);
         grid-row: repeat(3,1fr);
     }
-    #comunicacion{
+    .sectionServicios div:nth-child(3){
         grid-column: 1/2;
         grid-row: 2/3;
     }
-    #emailMarketing{
+    .sectionServicios div:nth-child(4){
         grid-column: 2/3;
         grid-row: 2/3;
     }
-    #sitioWeb{
+    .sectionServicios div:last-child{
         grid-column: 1/4;
         grid-row: 3/4;
     }
@@ -648,22 +692,22 @@ p{
         display: none;
     }
     /* Footer */
-    .footer2 li{
+    .footerBar div:nth-child(2) li{
         display: none;
     }
-    .footer3 li{
+    .footerBar div:nth-child(3) li{
         display: none;
     }
-    .footer4 li{
+    .footerBar div:nth-child(4) li{
         display: none;
     }
-    .footer5 li{
+    .footerBar div:nth-child(5) li{
         display: none;
     }
-    .footer6 li{
+    .footerBar div:nth-child(6) li{
         display: none;
     }
-    .footer8 li{
+    .footerBar div:nth-child(8) li{
         display: none;
     }
     .footerBar{
@@ -672,11 +716,11 @@ p{
         justify-items: center;
         justify-content: space-evenly;
     }
-    .footer7{
+    .footerBar div:nth-child(7){
         grid-column: 3/4;
         grid-row: 1/2;
     }
-    .footer8{
+    .footerBar div:last-child{
         grid-column: 3/4;
         grid-row: 2/3;
     }
