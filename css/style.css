@@ -745,7 +745,7 @@ input:focus{
         display: flex;
         position: fixed;
         top: 2rem;
-        right: 5rem;
+        right: 3.75rem;
     }
     header #toggle:checked ~ .menu{
         display: block;
@@ -835,6 +835,11 @@ input:focus{
     }
     #mision{
         flex-direction: column-reverse;
+    }
+}
+@media(max-width: 315px){
+    header label{
+        right: 1.875rem;
     }
 }
 
