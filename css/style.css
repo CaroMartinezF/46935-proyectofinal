@@ -49,6 +49,10 @@ footer{
 .navBar li a:hover{
     color: #8C6B30;
 }
+
+label, input{
+    display: none;
+}
 /* Main */
 /* Sección Banner Principal */
 .sectionPrincipal{
@@ -734,6 +738,26 @@ input:focus{
 
 @media (max-width: 390px){
     /* MENU HAMBURGUESA */
+    .menu{
+        display: none;
+    }
+    header label{
+        display: flex;
+        position: fixed;
+        top: 2rem;
+        right: 5rem;
+    }
+    header #toggle:checked ~ .menu{
+        display: block;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .navBar{
+        flex-direction: column;
+        text-align: center;
+        gap: 0px;
+    }
     .sectionPrincipal{
         font-size: 1.25rem;
         height: 12.5rem;
