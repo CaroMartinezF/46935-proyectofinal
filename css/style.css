@@ -50,14 +50,14 @@ footer{
     color: #8C6B30;
 }
 
-label, input{
+.menuHamburguesa{
     display: none;
 }
 /* Main */
 /* Sección Banner Principal */
 .sectionPrincipal{
     font-family: 'Gloock', serif;
-    color: #68A519;
+    color: white;
     font-size: 2.5rem;
     width: 100%;
     height: 31.25rem;
@@ -67,7 +67,6 @@ label, input{
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
     padding-top: 10%;
-
 }
 #index{
     background-image: url(../assets/img/kiwisBannerInicio.jpg);
@@ -83,6 +82,7 @@ label, input{
     text-align: left;
     padding-left: 5%;
 }
+
 #contacto{
     background-image: url(../assets/img/kiwiBannerContacto.jpg);
     text-align: left;
@@ -97,7 +97,7 @@ label, input{
     background-image: url(../assets/img/kiwiBannerServicios.jpg);
     text-align: left;
     padding-left: 5%;
-
+    color: #68A519;
 }
 
 h2{
@@ -282,7 +282,14 @@ p::selection{
     border-color: #68A519;
     margin-bottom: .625rem;
     margin-top: .625rem;
+    padding: .625rem;
+    border-radius: .9375rem;
 }
+.cardsClientes div button a{
+    color: white;
+    text-decoration: none;
+}
+
 .cardsClientes div button:active{
     background-color: #8C6B30;
     border-color: #8C6B30;
@@ -290,10 +297,10 @@ p::selection{
 
 #cardsPaginaClientes{
     width: 100%;
-    height: 150vh;
+    height: auto;
     display: grid;
-    grid-column: repeat(3,1fr);
-    grid-row: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
 }
 
 #cardsPaginaClientes div:first-child{
@@ -352,6 +359,15 @@ p::selection{
     justify-content: space-around;
     padding-bottom: 2.5rem;
 }
+.formContacto{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.formContacto label, .formContacto input{
+    margin: .625rem;
+}
 
 input:focus{
     background-color: #68A519;
@@ -359,6 +375,7 @@ input:focus{
 }
 /* Nosotros */
 .sectionNosotrosDetalle{
+    width: 100%;
     padding-bottom: .125rem;
     justify-content: center;
     display: flex;
@@ -366,16 +383,16 @@ input:focus{
 
 .sectionNosotrosDetalle article{
     background-color: #8C6B30;
-    width: 25rem;
-    height: 25rem;
+    width: 50rem;
+    height: 50rem;
 }
 
 .sectionNosotrosDetalle article p{
     width: 100%
 }
 .sectionNosotrosDetalle div img{
-    width: 25rem;
-    height: 25rem;
+    width: 50rem;
+    height: 50rem;
 
 }
 
@@ -388,8 +405,8 @@ input:focus{
     padding-top: .625rem;
     padding-bottom: .625rem;
     display: grid;
-    grid-column: repeat(3,1fr);
-    grid-row: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
     row-gap: .625rem;
 }
 .footerBar div:first-child{
@@ -470,8 +487,8 @@ input:focus{
 .sectionServicios{
     width: 100%;
     display: grid;
-    grid-column: repeat(3,1fr);
-    grid-row: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
     justify-items: center;
     align-items: center;
     padding-bottom: .625rem;
@@ -508,7 +525,45 @@ input:focus{
 }
 
 /* QUERIS INDEX */
-@media(max-width: 1024px){
+@media(max-width: 1750px){
+    .sectionNosotrosDetalle article{
+        width: 25rem;
+        height: 25rem;
+    }
+    
+    .sectionNosotrosDetalle div img{
+        width: 25rem;
+        height: 25rem;
+    }
+}
+@media(max-width: 1400px){
+    /* Pagina Clientes */
+    #cardsPaginaClientes{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        align-items: center;
+        justify-items: center;
+    }
+    #cardsPaginaClientes div:nth-child(3){
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    #cardsPaginaClientes div:nth-child(4){
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    #cardsPaginaClientes div:nth-child(5){
+        grid-column: 1/2;
+        grid-row: 3/4;
+        padding-bottom: .625rem;
+    }
+    #cardsPaginaClientes div:last-child{
+        grid-column: 2/3;
+        grid-row: 3/4;
+        padding-bottom: .625rem;
+    }
+}
+@media(max-width: 1240px){
     .headerIndex{
         display: flex;
         flex-direction: column;
@@ -553,48 +608,59 @@ input:focus{
     .servicios h4{
         width: fit-content;
     }
-    .servicios p{
-        width: 25rem;
-    }
     /* Clientes */
     .cardsClientes{
         flex-wrap: wrap;
-    }
-    .cardsClientes div{
-        width: 15.625rem;
     }
 
     /* Página Nosotros */
     .sectionNosotrosDetalle article{
         width: 20.3125rem;
+        height: 20.3125rem;;
     }
     .sectionNosotrosDetalle div img{
         width: 20.3125rem;
+        height: 20.3125rem;;
     }
+}
 
+@media(max-width: 900px){
+    /* Página Servicioos */
+    .sectionServicios{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+    .sectionServicios div:nth-child(3){
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .sectionServicios div:nth-child(4){
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .sectionServicios div:last-child{
+        grid-column: 1/4;
+        grid-row: 3/4;
+    }
     /* Pagina Clientes */
     #cardsPaginaClientes{
-        height: 100%;
-        grid-column: repeat(2,1fr);
-        grid-row: repeat(3,1fr);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    #cardsPaginaClientes div:nth-child(3){
-        grid-column: 1/2;
-        grid-row: 2/3;
+}
+/* Página Nosotros */
+@media(max-width: 855px){
+    .sectionNosotrosDetalle article{
+        width: 18.75rem;
+        height: 18.75rem;
     }
-    #cardsPaginaClientes div:nth-child(4){
-        grid-column: 2/3;
-        grid-row: 2/3;
+    .sectionNosotrosDetalle div img{
+        width: 18.75rem;
+        height: 18.75rem;
     }
-    #cardsPaginaClientes div:nth-child(5){
-        grid-column: 1/2;
-        grid-row: 3/4;
-        padding-bottom: .625rem;
-    }
-    #cardsPaginaClientes div:last-child{
-        grid-column: 2/3;
-        grid-row: 3/4;
-        padding-bottom: .625rem;
+    .formContacto label, .formContacto input{
+        margin: .3125rem;
     }
 }
 
@@ -608,8 +674,8 @@ input:focus{
     }
     /* Footer */
     .footerBar {
-        grid-column: repeat(2,1fr);
-        grid-row: repeat(5,1fr);
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(5,1fr);
         justify-content: center;
     }
     .footerBar div:nth-child(7){
@@ -622,23 +688,102 @@ input:focus{
         display: flex;
         align-items: center;
     }
+}
+@media(max-width: 650px){
+    .sectionNosotrosDetalle article{
+        width: 16.875rem;
+        height: 16.875rem;
+    }
+    .sectionNosotrosDetalle div img{
+        width: 16.875rem;
+        height: 16.875rem;
+    }
+    /* Pagina Contacto */
+    .flexContacto{
+        width: 100%;
+        flex-direction: column;
+        height: 100vh;
+        align-items: center;
+    }
+    #ubicacion{
+        width: 90%;
+        margin-right: 0%
+    }
+    .sectionContacto{
+        width: 90%;
+        margin-left: 0%;
+    }
+    /* MENU HAMBURGUESA */
+    .menu{
+        display: none;
+    }
+    #iconoMenu{
+        display: flex;
+        position: fixed;
+        top: 2rem;
+        right: 3.75rem;
+    }
+    header #toggle:checked ~ .menu{
+        display: block;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .navBar{
+        flex-direction: column;
+        text-align: center;
+        gap: 0px;
+    }
+    /* Servicios */
+    .sectionServiciosIndex article div{
+        display: flex;
+        flex-direction: column;
+    }
+    .textoServicios{
+        padding-right: .625rem;
+        padding-left: .625rem;
+    }
+    .imagen{
+        padding-left: 0%;
+    }
+    .flecha{
+        display: none;
+    }
+}
 
+@media(max-width: 600px){
+    .sectionNosotrosDetalle{
+        flex-direction: column;
+        align-items: self-end;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        justify-items: center;
+        padding-bottom: 1.25rem;
+    }
+    .sectionNosotrosDetalle article{
+        width: 90%;
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+    .sectionNosotrosDetalle div{
+        grid-column: 1/2;
+        grid-row: 1/3;
+        order: 1;
+    }
+
+    .sectionNosotrosDetalle div img{
+        width: 15.625rem;
+        height: 12.5rem;
+        padding-top: 1.5625rem;
+    }
+    #mision{
+        flex-direction: column-reverse;
+    }
     /* Página Servicioos */
     .sectionServicios{
-        grid-column: repeat(2,1fr);
-        grid-row: repeat(3,1fr);
-    }
-    .sectionServicios div:nth-child(3){
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
-    .sectionServicios div:nth-child(4){
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-    .sectionServicios div:last-child{
-        grid-column: 1/4;
-        grid-row: 3/4;
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -677,24 +822,6 @@ input:focus{
     .sectionNosotros{
         align-items: flex-end;
     }
-
-    /* Servicios */
-    .sectionServiciosIndex article div{
-        display: flex;
-        flex-direction: column;
-    }
-    .textoServicios{
-        padding-right: .625rem;
-        padding-left: .625rem;
-    }
-    .imagen{
-        padding-left: 0%;
-    }
-
-
-    .flecha{
-        display: none;
-    }
     /* Footer */
     .footerBar div:nth-child(2) li{
         display: none;
@@ -715,8 +842,8 @@ input:focus{
         display: none;
     }
     .footerBar{
-        grid-column: repeat(3,1fr);
-        grid-row: repeat(3,1fr);
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
         justify-items: center;
         justify-content: space-evenly;
     }
@@ -728,36 +855,12 @@ input:focus{
         grid-column: 3/4;
         grid-row: 2/3;
     }
-    /* Pagina Servicios */
-    #cardsPaginaClientes{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    #cardsPaginaClientes div{
+        width: 70%;
     }
 }
 
 @media (max-width: 390px){
-    /* MENU HAMBURGUESA */
-    .menu{
-        display: none;
-    }
-    header label{
-        display: flex;
-        position: fixed;
-        top: 2rem;
-        right: 3.75rem;
-    }
-    header #toggle:checked ~ .menu{
-        display: block;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-    }
-    .navBar{
-        flex-direction: column;
-        text-align: center;
-        gap: 0px;
-    }
     .sectionPrincipal{
         font-size: 1.25rem;
         height: 12.5rem;
@@ -766,77 +869,11 @@ input:focus{
         width: 13.125rem;
         height: 18.75rem;
     }
-    /* Página Servicioos */
-    .sectionServicios{
-        display: flex;
-        flex-direction: column;
+    #iconoMenu{
+        right: 2rem;
     }
 }
 
-/* Página Nosotros */
-
-@media(max-width: 855px){
-    .sectionNosotrosDetalle article{
-        width: 18.75rem;
-    }
-    .sectionNosotrosDetalle div img{
-        width: 18.75rem;
-    }
-}
-
-@media(max-width: 650px){
-    .sectionNosotrosDetalle article{
-        width: 16.875rem;
-    }
-    .sectionNosotrosDetalle div img{
-        width: 16.875rem;
-    }
-    /* Pagina Contacto */
-    .flexContacto{
-        width: 100%;
-        flex-direction: column;
-        height: 120vh;
-        align-items: center;
-    }
-    #ubicacion{
-        width: 90%;
-        margin-right: 0%
-    }
-    .sectionContacto{
-        width: 90%;
-        margin-left: 0%;
-    }
-}
-
-@media(max-width: 600px){
-    .sectionNosotrosDetalle{
-        flex-direction: column;
-        align-items: self-end;
-        display: grid;
-        grid-column: 1fr;
-        grid-row: repeat(2,1fr);
-        justify-items: center;
-        padding-bottom: 1.25rem;
-    }
-    .sectionNosotrosDetalle article{
-        width: 20.3125rem;
-        grid-column: 1/2;
-        grid-row: 1/2;
-    }
-    .sectionNosotrosDetalle div{
-        grid-column: 1/2;
-        grid-row: 1/3;
-        order: 1;
-    }
-
-    .sectionNosotrosDetalle div img{
-        width: 15.625rem;
-        height: 12.5rem;
-    }
-    #mision{
-        flex-direction: column-reverse;
-    }
-}
 @media(max-width: 315px){
     header label{
         right: 1.875rem;

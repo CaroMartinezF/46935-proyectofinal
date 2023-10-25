@@ -13,8 +13,8 @@
         <div class="logoKiwii">
             <a href="../index.html"><img src="../assets/img/logoKiwi.png" alt="Logo Kiwi"></a>
         </div>
-        <input type="checkbox" id="toggle">
-        <label for="toggle"><img src="../assets/img/menu.png" alt="Icono con tres lineas para menu desplegable."></label>
+        <input class="menuHamburguesa" type="checkbox" id="toggle">
+        <label class="menuHamburguesa" id="iconoMenu" for="toggle"><img src="../assets/img/menu.png" alt="Icono con tres lineas para menu desplegable."></label>
         <nav class="menu">
             <ul class="navBar">
                 <li><a href="../index.html">Inicio</a></li>
@@ -32,27 +32,15 @@
         <section class="flexContacto">
             <section class="sectionContacto">
                 <h3>Dejanos tu consulta</h3>
-                <form action="">
+                <form class="formContacto" action="">
                     <label for="nombre">Nombre y apellido:</label>
                     <input type="text" id="nombre" required placeholder="Ingrese su nombre y apellido">
-                    <br>
-                    <br>
-                    <br>
                     <label for="email">Mail:</label>
                     <input type="email" id="mail" required placeholder="Ingrese su mail">
-                    <br>
-                    <br>
-                    <br>
                     <label for="asunto">Asunto:</label>
                     <input type="text" id="asunto" required placeholder="Ingrese un asunto">
-                    <br>
-                    <br>
-                    <br>
                     <label for="mensaje">Mensaje:</label>
                     <input type="text" id="mensaje" required placeholder="Ingrese su mensaje">
-                    <br>
-                    <br>
-                    <br>
                     <input type="submit" value="Enviar">
                 </form>
             </section>  
