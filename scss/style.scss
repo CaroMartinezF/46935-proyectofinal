@@ -1,0 +1,32 @@
+/* UTILITIES */
+@import "./utilities/variables";
+@import "./utilities/mixins";
+@import "./utilities/maps";
+/* BASE */
+@import "./base/reset";
+@import "./base/typo";
+/* COMPONENTS */
+@import "./components/bootstrap";
+/* LAYOUT */
+@import "./layout/header";
+@import "./layout/main-index";
+@import "./layout/footer";
+@import "./layout/main-clientes";
+@import "./layout/main-contacto";
+@import "./layout/main-nosotros";
+@import "./layout/main-servicios";
+@import "./layout/media/media-1750px";
+@import "./layout/media/media-1530px";
+@import "./layout/media/media-1400px";
+@import "./layout/media/media-1240px";
+@import "./layout/media/media-1015px";
+@import "./layout/media/media-900px";
+@import "./layout/media/media-855px";
+@import "./layout/media/media-768px";
+@import "./layout/media/media-650px";
+@import "./layout/media/media-600px";
+@import "./layout/media/media-567px";
+@import "./layout/media/media-390px";
+@import "./layout/media/media-315px";
+
+

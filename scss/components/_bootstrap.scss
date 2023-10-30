@@ -1,0 +1,27 @@
+/* BOOTSTRAP */
+.colorNav{
+    background-color: $color-secundario;
+}
+.navbar-brand img{
+    width: 185px;
+    height: 50px;
+}
+
+.navbar-nav a{
+    font-family: 'lora', serif;
+    font-size: 2.1875rem;
+    font-weight: bolder;
+    color: #68a519;
+}
+#navbarNavAltMarkup{
+    justify-content: end;
+}
+
+.card{
+    background-color: #190E08;
+}
+
+.carouselImagen{
+    width: 100%;
+    height: 31.25rem;
+}

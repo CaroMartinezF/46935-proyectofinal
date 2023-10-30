@@ -1,0 +1,74 @@
+@media (max-width: 567px){
+    .navBar li a{
+        font-size: 1.125rem;
+    }
+    .sectionPrincipal{
+        font-size: 1.25rem;
+        height: 15.625rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    h3{
+        font-size: 1.375rem;
+    }
+    h4{
+        font-size: 1.125rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    /* Nosotros */
+    .item1{
+        display: none;
+    }
+    .sectionNosotros{
+        align-items: flex-end;
+        div{
+            width: 15.625rem;
+            height: 21.875rem;
+            img{
+                width: 65%;
+                height: 55%;
+            }
+        }
+    }
+    /* Footer */
+    footer nav ul{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+        justify-items: center;
+        justify-content: space-evenly;
+        div{
+            &:nth-child(2) li{
+                display: none;
+            }
+            &:nth-child(3) li{
+                display: none;
+            }
+            &:nth-child(4) li{
+                display: none;
+            }
+            &:nth-child(5) li{
+                display: none;
+            }
+            &:nth-child(6) li{
+                display: none;
+            }
+            &:nth-child(7){
+                grid-column: 3/4;
+                grid-row: 1/2;
+            }
+            &:nth-child(8) li{
+                display: none;
+            }
+            &:last-child{
+                grid-column: 3/4;
+                grid-row: 2/3;
+            }
+        }
+    }
+    #cardsPaginaClientes div{
+        width: 70%;
+    }
+}

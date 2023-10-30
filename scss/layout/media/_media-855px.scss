@@ -1,0 +1,31 @@
+@media(max-width: 855px){
+    /* SERVICIOS INDEX */
+    .sectionServiciosIndex{
+        article{
+            margin-bottom: 1.25rem;
+        }
+    }
+    /* Página Nosotros */
+    .sectionNosotrosDetalle{
+        article{
+        width: 18.75rem;
+        height: 18.75rem;
+        }
+        div{
+            img{
+                width: 18.75rem;
+                height: 18.75rem;
+            }
+        }
+    }
+    .sectionContacto{
+        form{
+            label{
+                margin: .3125rem;
+            }
+            input{
+                margin: .3125rem;
+            }
+        }
+    }
+}

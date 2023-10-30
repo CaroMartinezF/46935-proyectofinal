@@ -1,0 +1,8 @@
+
+@media(max-width: 900px){
+
+    /* Pagina Clientes */
+    #cardsPaginaClientes{
+        @include flex(column,nowrap,center,center);
+    }
+}

@@ -1,0 +1,48 @@
+/* HEADER */
+header{
+    background-color: $color-secundario;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2.5rem;
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+    div{
+        a{
+            img{
+                width: 185px;
+                height: 50px;
+            }
+        }
+    }
+    input{
+        display: none;
+    }
+    label{
+        @extend input;
+    }
+}
+.navBar{
+    list-style: none;
+    display: flex;
+    gap: 1.875rem;
+    li{
+        a{
+            text-decoration: none;
+            color: $color-principal;
+            font-family: 'lora', serif;
+            font-size: 2.1875rem;
+            font-weight: bolder;
+            &:hover{
+            color: $color-terciario;
+            }
+        }
+        &:hover{
+            transform: scale(1.2);
+            transition: transform 1s;
+        }
+    }
+}
+
