@@ -49,21 +49,6 @@
             height: auto;
         }
     }
-    /* Servicios */
-    .sectionServiciosIndex article div{
-        display: flex;
-        flex-direction: column;
-        div{
-            padding-right: .625rem;
-            padding-left: .625rem;        
-        }
-    }
-    .imagen{
-        padding-left: 0%;
-    }
-    .flecha{
-        display: none;
-    }
     /* CONTACTO */
     .flexContacto{
         section{

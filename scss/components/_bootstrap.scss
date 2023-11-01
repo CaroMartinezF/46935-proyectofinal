@@ -1,4 +1,13 @@
 /* BOOTSTRAP */
+/* CARROUSEL INDEX PRINCIPAL */
+.carousel-caption{
+    position: static !important;
+    align-items: center;
+    P{
+        width: 80%;
+    }
+}
+/* INDEX BOOTSTRAP */
 .colorNav{
     background-color: $color-secundario;
 }
@@ -6,7 +15,6 @@
     width: 185px;
     height: 50px;
 }
-
 .navbar-nav a{
     font-family: 'lora', serif;
     font-size: 2.1875rem;
@@ -16,11 +24,9 @@
 #navbarNavAltMarkup{
     justify-content: end;
 }
-
 .card{
     background-color: #190E08;
 }
-
 .carouselImagen{
     width: 100%;
     height: 31.25rem;

@@ -1,5 +1,5 @@
-body, main{
-    background-color: $color-principal
+body{
+    background-color: $color-principal;
 }
 /* MAIN */
 /* TEXTOS */
@@ -98,10 +98,8 @@ p{
     grid-column: 1/4;
     grid-row: 2/5;
     align-items: center;
-    display: flex;
+    @include flex(row, nowrap, space-evenly, none);
     width: 100%;
-    flex-direction: row;
-    justify-content: space-evenly;
     div{
         width: 25rem;
         height: 40.625rem;
@@ -155,29 +153,12 @@ p{
         opacity: 1;
     }
 }
-/* FLEX SERVICIOS */
-.sectionServiciosIndex{
-    @include flex(column, nowrap, space-around, center);
-    width: 100%;
-    article{
-        div{
-            display: flex;
-            width: 100%;
-            align-items: center;
-            justify-content: space-around;
-            div{
-                h4{
-                    width: 100%;
-                    &:hover{
-                        -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-                        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-                    }
-                }
-                p{
-                    width: 100%;
-                    padding-right: 1.25rem;
-                }
-            }
+/* INDEX SERVICIOS */
+.carousel-caption{
+    h4{
+        &:hover{
+            -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
         }
     }
 }
@@ -200,13 +181,6 @@ p{
         -webkit-transform: scale(1.5);
             transform: scale(1.5);
     }
-}
-.imagen{
-    width: 30%;
-    padding-left: 1.25rem;
-}
-.flecha{
-    width: auto;
 }
 /* SECCION CLIENTES */
 .cardsClientes{

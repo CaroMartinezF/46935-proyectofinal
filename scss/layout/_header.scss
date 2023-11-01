@@ -2,9 +2,7 @@
 header{
     background-color: $color-secundario;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(row, nowrap, space-between, center);
     padding: 1.25rem 2.5rem;
     position: sticky;
     top: 0px;
