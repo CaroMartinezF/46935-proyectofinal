@@ -1,11 +1,12 @@
 @media(max-width: 600px){
     .sectionNosotrosDetalle{
-        @include flex(column, nowrap, none, self-end);
+        @include flex(column, nowrap, none, none);
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2,1fr);
-        justify-items: center;
         padding-bottom: 1.25rem;
+        justify-items: center;
+        align-items: flex-start;
         article{
             width: 90%;
             grid-column: 1/2;
@@ -13,12 +14,12 @@
         }
         div{
             grid-column: 1/2;
-            grid-row: 1/3;
+            grid-row: 2/3;
             order: 1;
             img{
                 width: 15.625rem;
                 height: 12.5rem;
-                padding-top: 1.5625rem;
+                margin-top: 1.5625rem;
             }
         }
     }

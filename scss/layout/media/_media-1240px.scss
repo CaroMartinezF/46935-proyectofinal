@@ -11,6 +11,9 @@
         font-size: 1.875rem;
         height: 25rem;
     }
+    .claim{
+        font-size: map-get($size , xl);
+    }
     h2{
         font-size: 1.5625rem;
     }

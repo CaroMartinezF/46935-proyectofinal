@@ -1,13 +1,13 @@
 @media(max-width: 650px){
     .sectionNosotrosDetalle{
         article{
-            width: 16.875rem;
-            height: 16.875rem;
+            width: 18.125rem;
+            height: 18.125rem;
         }
         div{
             img{
-                width: 16.875rem;
-                height: 16.875rem;
+                width: 18.125rem;
+                height: 18.125rem;
             }
         }
     } 
@@ -56,5 +56,8 @@
         margin-left: none;
         margin-bottom: 1.25rem;
         }
+    }
+    .claim{
+        font-size: map-get($size , lg);
     }
 }

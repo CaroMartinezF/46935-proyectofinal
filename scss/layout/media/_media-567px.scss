@@ -15,9 +15,6 @@
     h4{
         font-size: 1.125rem;
     }
-    p{
-        font-size: 1rem;
-    }
     /* Nosotros */
     .item1{
         display: none;
@@ -70,5 +67,9 @@
     }
     #cardsPaginaClientes div{
         width: 70%;
+    }
+    .paginaError a img{
+        width: 25rem;
+        height: 15.625rem;
     }
 }

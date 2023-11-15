@@ -86,10 +86,13 @@ h1::selection {
   background-color: #68A519;
   color: white; }
 
+.claim {
+  font-size: 4.375rem; }
+
 h2, h3, h4 {
   font-family: 'Poppins', sans-serif;
   text-align: center;
-  font-size: 1.875rem;
+  font-size: 2.1875rem;
   padding-top: .625rem;
   color: white; }
   h2::selection, h3::selection, h4::selection {
@@ -103,13 +106,13 @@ h3 {
   padding-top: 0%; }
 
 h4 {
-  font-size: 1.5625rem;
+  font-size: 1.875rem;
   padding-top: 0%; }
 
 p {
   font-family: 'Lora', serif;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.5625rem;
   color: white; }
   p::selection {
     background-color: #8C6B30;
@@ -180,8 +183,7 @@ p {
   align-items: none;
   width: 100%; }
   .sectionNosotros div {
-    width: 25rem;
-    height: 40.625rem;
+    width: 25.625rem;
     background-color: #190E08;
     box-shadow: 0.125rem 0.125rem 0.125rem #383737;
     border-radius: 10%;
@@ -199,9 +201,7 @@ p {
       .sectionNosotros div img:hover {
         opacity: 100%; }
     .sectionNosotros div p {
-      padding-top: .625rem; }
-      .sectionNosotros div p:hover::after {
-        content: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis similique cum beatae illo nemo"; }
+      padding-bottom: .625rem; }
 
 @-webkit-keyframes flip-in-hor-bottom {
   0% {
@@ -244,6 +244,26 @@ p {
     -webkit-transform: scale(1.5);
     transform: scale(1.5); } }
 
+.carousel-image img:hover {
+  -webkit-animation: rotate-center 0.6s ease-in-out both;
+  animation: rotate-center 0.6s ease-in-out both; }
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
 /* SECCION CLIENTES */
 .cardsClientes {
   width: 100%;
@@ -272,19 +292,6 @@ p {
       filter: opacity(40%); }
       .cardsClientes div img:hover {
         filter: opacity(100%); }
-    .cardsClientes div button {
-      background-color: #68A519;
-      border-color: #68A519;
-      margin-bottom: .625rem;
-      margin-top: .625rem;
-      padding: .625rem;
-      border-radius: .9375rem; }
-      .cardsClientes div button:active {
-        background-color: #8C6B30;
-        border-color: #8C6B30; }
-      .cardsClientes div button a {
-        color: white;
-        text-decoration: none; }
 
 /* FOOTER */
 footer {
@@ -385,24 +392,42 @@ footer {
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr); }
-  #cardsPaginaClientes div:first-child {
-    grid-column: 1/2;
-    grid-row: 1/2; }
-  #cardsPaginaClientes div:nth-child(2) {
-    grid-column: 2/3;
-    grid-row: 1/2; }
-  #cardsPaginaClientes div:nth-child(3) {
-    grid-column: 3/4;
-    grid-row: 1/2; }
-  #cardsPaginaClientes div:nth-child(4) {
-    grid-column: 1/2;
-    grid-row: 2/3; }
-  #cardsPaginaClientes div:nth-child(5) {
-    grid-column: 2/3;
-    grid-row: 2/3; }
-  #cardsPaginaClientes div:last-child {
-    grid-column: 3/4;
-    grid-row: 2/3; }
+  #cardsPaginaClientes div {
+    padding: 1.25rem; }
+    #cardsPaginaClientes div:first-child {
+      grid-column: 1/2;
+      grid-row: 1/2; }
+    #cardsPaginaClientes div:nth-child(2) {
+      grid-column: 2/3;
+      grid-row: 1/2; }
+    #cardsPaginaClientes div:nth-child(3) {
+      grid-column: 3/4;
+      grid-row: 1/2; }
+    #cardsPaginaClientes div:nth-child(4) {
+      grid-column: 1/2;
+      grid-row: 2/3; }
+    #cardsPaginaClientes div:nth-child(5) {
+      grid-column: 2/3;
+      grid-row: 2/3; }
+    #cardsPaginaClientes div:last-child {
+      grid-column: 3/4;
+      grid-row: 2/3; }
+
+.button {
+  width: 9.375rem;
+  height: 3.125rem;
+  background-color: #68A519;
+  border-color: #68A519;
+  margin-bottom: .625rem;
+  margin-top: .625rem;
+  padding: .625rem;
+  border-radius: .9375rem; }
+  .button:active {
+    background-color: #8C6B30;
+    border-color: #8C6B30; }
+  .button a {
+    color: white;
+    text-decoration: none; }
 
 /* PAGINA CONTACTO */
 #ubicacion {
@@ -429,7 +454,7 @@ footer {
       .flexContacto section form fieldset {
         font-family: 'Poppins', sans-serif;
         text-align: center;
-        font-size: 1.875rem;
+        font-size: 2.1875rem;
         padding-left: 1.875rem;
         color: white;
         display: flex;
@@ -439,7 +464,7 @@ footer {
         align-items: flex-start; }
         .flexContacto section form fieldset label, .flexContacto section form fieldset input {
           margin: .3125rem;
-          font-size: 1.5625rem;
+          font-size: 1.875rem;
           width: 95%; }
         .flexContacto section form fieldset input, .flexContacto section form fieldset header label, header .flexContacto section form fieldset label {
           color: #68A519; }
@@ -459,7 +484,13 @@ footer {
     background-color: #190E08;
     border-color: #190E08; }
 
+#contacto h1 {
+  color: #190E08; }
+
 /* PAGINA NOSOTROS */
+.paginaNosotros {
+  margin-bottom: 1.875rem; }
+
 .sectionNosotrosDetalle {
   width: 100%;
   padding-bottom: .125rem;
@@ -469,11 +500,16 @@ footer {
   justify-content: center;
   align-items: none; }
   .sectionNosotrosDetalle article {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
     background-color: #8C6B30;
     width: 50rem;
     height: 50rem; }
     .sectionNosotrosDetalle article p {
-      width: 100%; }
+      width: 95%; }
   .sectionNosotrosDetalle div img {
     width: 50rem;
     height: 50rem; }
@@ -490,7 +526,7 @@ footer {
   .sectionServicios div {
     width: 31.25rem;
     height: 46.875rem;
-    margin-bottom: .625rem; }
+    margin-bottom: 5rem; }
     .sectionServicios div:first-child {
       display: flex;
       flex-direction: column;
@@ -532,37 +568,98 @@ footer {
       grid-column: 2/4;
       grid-row: 2/3; }
     .sectionServicios div img {
-      justify-items: center;
-      -webkit-animation: rotate-in-2-cw 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-      animation: rotate-in-2-cw 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+      justify-items: center; }
+      .sectionServicios div img:hover {
+        -webkit-animation: rotate-center 0.6s ease-in-out both;
+        animation: rotate-center 0.6s ease-in-out both; }
 
-@-webkit-keyframes rotate-in-2-cw {
+@-webkit-keyframes rotate-center {
   0% {
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    opacity: 0; }
-  100% {
     -webkit-transform: rotate(0);
-    transform: rotate(0);
-    opacity: 1; } }
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 
-@keyframes rotate-in-2-cw {
+@keyframes rotate-center {
   0% {
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    opacity: 0; }
-  100% {
     -webkit-transform: rotate(0);
-    transform: rotate(0);
-    opacity: 1; } }
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+#servicios h1 {
+  color: #190E08; }
+
+.paginaError {
+  width: 100%;
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .paginaError img:hover {
+    -webkit-animation: wobble-hor-bottom 0.8s both;
+    animation: wobble-hor-bottom 0.8s both; }
+  .paginaError div {
+    width: 50%;
+    display: flex;
+    flex-direction: column; }
+
+@-webkit-keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%; }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+    transform: translateX(-30px) rotate(-6deg); }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+    transform: translateX(15px) rotate(6deg); }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+    transform: translateX(-15px) rotate(-3.6deg); }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+    transform: translateX(9px) rotate(2.4deg); }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+    transform: translateX(-6px) rotate(-1.2deg); } }
+
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%; }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+    transform: translateX(-30px) rotate(-6deg); }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+    transform: translateX(15px) rotate(6deg); }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+    transform: translateX(-15px) rotate(-3.6deg); }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+    transform: translateX(9px) rotate(2.4deg); }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+    transform: translateX(-6px) rotate(-1.2deg); } }
 
 @media (max-width: 1750px) {
   .sectionNosotrosDetalle article {
-    width: 25rem;
-    height: 25rem; }
+    width: 31.25rem;
+    height: 31.25rem; }
   .sectionNosotrosDetalle div img {
-    width: 25rem;
-    height: 25rem; } }
+    width: 31.25rem;
+    height: 31.25rem; } }
 
 @media (max-width: 1530px) {
   /* Página Servicios */
@@ -610,6 +707,8 @@ footer {
   .sectionPrincipal {
     font-size: 1.875rem;
     height: 25rem; }
+  .claim {
+    font-size: 2.5rem; }
   h2, h3, h4 {
     font-size: 1.5625rem; }
   h3 {
@@ -650,8 +749,11 @@ footer {
   .sectionServicios div {
     width: 70%; }
     .sectionServicios div img {
-      width: 350px;
-      height: 350px; } }
+      width: 21.875rem;
+      height: 21.875rem; }
+  .paginaError {
+    display: flex;
+    flex-direction: column; } }
 
 @media (max-width: 900px) {
   /* Pagina Clientes */
@@ -664,6 +766,8 @@ footer {
 
 @media (max-width: 855px) {
   /* Página Nosotros */
+  p {
+    font-size: 1rem; }
   .sectionNosotrosDetalle article {
     width: 18.75rem;
     height: 18.75rem; }
@@ -714,11 +818,11 @@ footer {
 
 @media (max-width: 650px) {
   .sectionNosotrosDetalle article {
-    width: 16.875rem;
-    height: 16.875rem; }
+    width: 18.125rem;
+    height: 18.125rem; }
   .sectionNosotrosDetalle div img {
-    width: 16.875rem;
-    height: 16.875rem; }
+    width: 18.125rem;
+    height: 18.125rem; }
   /* Pagina Contacto */
   .flexContacto {
     width: 100%;
@@ -752,7 +856,9 @@ footer {
   .flexContacto section {
     width: 90%;
     margin-left: none;
-    margin-bottom: 1.25rem; } }
+    margin-bottom: 1.25rem; }
+  .claim {
+    font-size: 2.1875rem; } }
 
 @media (max-width: 600px) {
   .sectionNosotrosDetalle {
@@ -760,24 +866,25 @@ footer {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: none;
-    align-items: self-end;
+    align-items: none;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
+    padding-bottom: 1.25rem;
     justify-items: center;
-    padding-bottom: 1.25rem; }
+    align-items: flex-start; }
     .sectionNosotrosDetalle article {
       width: 90%;
       grid-column: 1/2;
       grid-row: 1/3; }
     .sectionNosotrosDetalle div {
       grid-column: 1/2;
-      grid-row: 1/3;
+      grid-row: 2/3;
       order: 1; }
       .sectionNosotrosDetalle div img {
         width: 15.625rem;
         height: 12.5rem;
-        padding-top: 1.5625rem; }
+        margin-top: 1.5625rem; }
   #mision {
     flex-direction: column-reverse; } }
 
@@ -793,8 +900,6 @@ footer {
     font-size: 1.375rem; }
   h4 {
     font-size: 1.125rem; }
-  p {
-    font-size: 1rem; }
   /* Nosotros */
   .item1 {
     display: none; }
@@ -831,21 +936,47 @@ footer {
       grid-column: 3/4;
       grid-row: 2/3; }
   #cardsPaginaClientes div {
-    width: 70%; } }
+    width: 70%; }
+  .paginaError a img {
+    width: 25rem;
+    height: 15.625rem; } }
+
+@media (max-width: 428px) {
+  .sectionNosotrosDetalle article {
+    justify-content: flex-start; }
+  .paginaError a img {
+    width: 18.75rem;
+    height: 9.375rem; } }
 
 @media (max-width: 390px) {
   .sectionPrincipal {
     font-size: 1.25rem;
     height: 12.5rem; }
-  .sectionNosotros div {
-    width: 13.125rem;
-    height: 18.75rem; }
   #iconoMenu {
     right: 2rem; }
   /* CARROUSEL SERVICIOS INDEX */
   .carousel-image img {
     width: 12.5rem;
-    height: 12.5rem; } }
+    height: 12.5rem; }
+  .claim {
+    font-size: 1.875rem; }
+  .sectionNosotrosDetalle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+    .sectionNosotrosDetalle article {
+      display: flex;
+      justify-content: center; }
+  #mision {
+    display: flex;
+    flex-direction: row-reverse; }
+  .sectionServicios div {
+    width: 60%; }
+    .sectionServicios div img {
+      width: 18.75rem;
+      height: 18.75rem; } }
 
 @media (max-width: 315px) {
   header label, header .flexContacto section form fieldset input, .flexContacto section form fieldset header input {

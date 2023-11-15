@@ -1,14 +1,18 @@
 /* PAGINA NOSOTROS */
+.paginaNosotros{
+    margin-bottom: 1.875rem;
+}
 .sectionNosotrosDetalle{
     width: 100%;
     padding-bottom: .125rem;
     @include flex(row,nowrap,center,none);
     article{
+        @include flex(column,nowrap,center,center);
         background-color: $color-terciario;
         width: 50rem;
         height: 50rem;
         p{
-            width: 100%
+            width: 95%;
         }
     }
     div{

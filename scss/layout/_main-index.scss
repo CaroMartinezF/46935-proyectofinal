@@ -7,6 +7,9 @@ h1::selection{
     background-color: $color-principal;
     color: $color-texto;
 }
+.claim{
+    font-size: map-get($size , xxl);
+}
 h2{
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -101,8 +104,7 @@ p{
     @include flex(row, nowrap, space-evenly, none);
     width: 100%;
     div{
-        width: 25rem;
-        height: 40.625rem;
+        width: 25.625rem;
         background-color: $color-secundario;
         box-shadow: .125rem .125rem .125rem rgb(56, 55, 55);
         border-radius: 10%;
@@ -120,10 +122,7 @@ p{
             }
         }
         p{
-            padding-top: .625rem;
-            &:hover::after{
-                content: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis similique cum beatae illo nemo";
-            }
+            padding-bottom: .625rem;
         }
         -webkit-animation: flip-in-hor-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         animation: flip-in-hor-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -182,6 +181,33 @@ p{
             transform: scale(1.5);
     }
 }
+.carousel-image img{
+    &:hover{
+        -webkit-animation: rotate-center 0.6s ease-in-out both;
+        animation: rotate-center 0.6s ease-in-out both;
+    }
+}
+@-webkit-keyframes rotate-center {
+    0% {
+    -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+    -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate-center {
+    0% {
+    -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+    -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
 /* SECCION CLIENTES */
 .cardsClientes{
     width: 100%;
@@ -202,22 +228,6 @@ p{
             filter: opacity(40%);
             &:hover{
                 filter: opacity(100%);
-            }
-        }
-        button{
-            background-color: $color-principal;
-            border-color: $color-principal;
-            margin-bottom: .625rem;
-            margin-top: .625rem;
-            padding: .625rem;
-            border-radius: .9375rem;
-            &:active{
-                background-color: $color-terciario;
-                border-color: $color-terciario;
-            }
-            a{
-                color: $color-texto;
-                text-decoration: none;
             }
         }
     }

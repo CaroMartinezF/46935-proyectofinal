@@ -3,10 +3,6 @@
         font-size: 1.25rem;
         height: 12.5rem;
     }
-    .sectionNosotros div{
-        width: 13.125rem;
-        height: 18.75rem;
-    }
     #iconoMenu{
         right: 2rem;
     }
@@ -14,5 +10,28 @@
     .carousel-image img{
         width: 12.5rem;
         height: 12.5rem;
+    }
+    .claim{
+        font-size: map-get($size , m);
+    }
+    .sectionNosotrosDetalle{
+        @include flex(row,wrap,center,center);
+        article{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    #mision{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .sectionServicios{
+        div{
+            width: 60%;
+            img{
+                width: 18.75rem;
+                height: 18.75rem;
+            }
+        }
     }
 }

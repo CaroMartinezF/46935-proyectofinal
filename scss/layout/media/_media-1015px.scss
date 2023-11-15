@@ -3,10 +3,14 @@
         div{
             width: 70%;
             img{
-                width: 350px;
-                height: 350px;
+                width: 21.875rem;
+                height: 21.875rem;
             }
         }
+    }
+    .paginaError{
+        display: flex;
+        flex-direction: column;
     }
 }
 
