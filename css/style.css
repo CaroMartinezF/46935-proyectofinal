@@ -305,7 +305,8 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    row-gap: .625rem; }
+    row-gap: .625rem;
+    margin-bottom: 0; }
     footer nav ul div h4 {
       color: #68A519;
       font-size: .9375rem;
@@ -594,8 +595,7 @@ footer {
 
 .paginaError {
   width: 100%;
-  margin-top: 1.875rem;
-  margin-bottom: 1.875rem;
+  height: 68vh;
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -605,7 +605,8 @@ footer {
   .paginaError div {
     width: 50%;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    margin-bottom: 1.25rem; }
 
 @-webkit-keyframes wobble-hor-bottom {
   0%,

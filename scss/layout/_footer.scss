@@ -12,6 +12,7 @@ footer{
             grid-template-columns: repeat(3,1fr);
             grid-template-rows: repeat(3,1fr);
             row-gap: .625rem;
+            margin-bottom: 0;
             div{
                 h4{
                     color: $color-principal;
